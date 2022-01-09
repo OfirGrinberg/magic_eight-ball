@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	font-family: 'Vujahday Script', cursive;
+	text-align-last: center;
+	background-color: lightcyan;
+}
+.flexbox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	height: 100%;
+	width: clamp(500px, 50%, 1000px);
+	background-color: darkcyan;
+}
+.header {
+	font-size: 3.5rem;
+}
+.question {
+	height: 30px;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 7px;
+	border: 2px solid #2a54d3bd;
+}
+.btn {
+	margin: 30px;
+	border-radius: 50%;
+	width: clamp(200px, 50%, 500px);
+	aspect-ratio: 1;
+	background-image: url(magic8ball.jpg);
+	background-position: center;
+	background-size: 105%;
+	&:hover {
+		cursor: pointer;
+	}
+	.txt {
+		color: white;
+		width: 10%;
+		font-size: clamp(0.4rem, 1vw, 0.9rem);
+		margin-bottom: 10px;
+		text-align: center;
+		font-family: 'Anton', sans-serif;
+	}
+}
+.spin {
+	animation-name: spin;
+	animation-duration: 1.5s;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
